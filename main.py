@@ -1,4 +1,4 @@
-#Code to Improve Lab 1-Voting App-Main File
+#This is my code to Improve Lab 1-Voting App. Main.py holds the startup script to initialize the window. 
 
 from GUI import * 
 

@@ -16,7 +16,7 @@ class GUI:
         self.option = StringVar(None)
         self.label_voting_name = Label(self.window, text="Enter your name:")
         self.label_voting_ID = Label(self.window, text="Enter your unique ID:") 
-        self.label_voting_DOB = Label(self.window, text="Enter your Date of Birth (MM/DD/YY):")
+        self.label_voting_DOB = Label(self.window, text="Enter your Date of Birth (MM/DD/YYYY):")
         self.label_voting_pane = Label(self.window, text="Choose one candidate:")
         
 
@@ -28,7 +28,7 @@ class GUI:
 
         self.entry_voting_name = Entry(self.window, width=20)
         self.entry_voting_ID = Entry(self.window, width=20)
-        self.entry_voting_DOB = Entry(self.window, width=20)
+        self.entry_voting_DOB = Entry(self.window, width=15)
         self.option.set(None)
         self.radio_pedro = Radiobutton(self.window, text= "Pedro Sanchez",variable=self.option, value="Pedro_Sanchez", image=pedro_image, compound="left")
         self.radio_pedro.image = pedro_image 
@@ -43,7 +43,7 @@ class GUI:
         self.label_voting_ID.pack(side="top", padx = 10, pady=15, anchor="w")
         self.entry_voting_ID.place(x=150, y=67)
         self.label_voting_DOB.pack(side="top", padx = 10, pady=15, anchor="w")
-        self.entry_voting_DOB.place(x=220, y=118)
+        self.entry_voting_DOB.place(x=230, y=118)
         self.label_voting_pane.pack(side="top", anchor='center')
         self.radio_pedro.pack(side="top", pady=10, anchor="w")
         self.radio_summer.pack(side="top", pady=10, anchor="w")
@@ -69,8 +69,8 @@ class Results(GUI):
 
         self.res.pack(side="top", anchor="n")
         self.divider.pack(side="top", anchor="n")
-        self.total_pedro.pack(side="top", padx =5, pady =1, anchor="e")
-        self.total_summer.pack(side="top", padx =5, pady = 1, anchor="nw")
+        self.total_pedro.place(x=140, y=60)
+        self.total_summer.place(x=0, y=60)
     
         
           

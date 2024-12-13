@@ -20,6 +20,9 @@ def submit(gui_instance) -> None:
        name = gui_instance.entry_voting_name.get().strip()
        id = gui_instance.entry_voting_ID.get().strip()
        dob = gui_instance.entry_voting_DOB.get()
+       student_info = {"111": "Ben Kane"}
+       if id and name not in student_info.items():
+            raise ValueError("Student not found")
        if not name:
             raise ValueError("Name cannot be empty.")
        if not id :
@@ -30,7 +33,10 @@ def submit(gui_instance) -> None:
        if not dob:
             raise ValueError("Date of Birth cannot be empty.")
        if not re.fullmatch(dob_regex, dob):
-              raise TypeError("Please enter the date in (MM/DD/YY) format")
+              raise TypeError("Please enter the date in (MM/DD/YYYY) format")
+       if vote == "None":
+            
+            raise ValueError("Please choose a candidate")
        gui_instance.label_voting_pane.config(text="Submission successful!", fg="green")
        #Above checks input to confirm it is in correct format
        with open('Logging_data.csv', 'a', newline='') as file:
