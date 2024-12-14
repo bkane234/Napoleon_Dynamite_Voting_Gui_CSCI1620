@@ -11,8 +11,8 @@ def submit(gui_instance) -> None:
     
     
     '''
-    id_regex: str = r'\b\d{' + str(3) + r'}\b' #Regex for checking syntax of the ID entry field
-    dob_regex: str = r'\b(0[1-9]|1[0,1,2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}\b' #Regex for checking the birthday syntax of the DOB entry field
+    id_regex: str = r'\b\d{' + str(3) + r'}\b' #Regex for checking syntax of the ID entry field, from stackoverflow.com
+    dob_regex: str = r'\b(0[1-9]|1[0,1,2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}\b' #Regex for checking the birthday syntax of the DOB entry field, also from stackoverflow.com
     
 
     
